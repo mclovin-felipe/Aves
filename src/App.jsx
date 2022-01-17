@@ -10,7 +10,7 @@ import {
 	Collapsible,
 	ResponsiveContext,
 } from "grommet";
-import { Notification, Favorite, ShareOption } from "grommet-icons";
+import { Notification , Github} from "grommet-icons";
 import AppBox from "./components/Box.jsx";
 function App() {
 	const [List, setList] = useState([]);
@@ -61,7 +61,7 @@ function App() {
 				<ResponsiveContext.Consumer>
 					{(size) => (
 						<Box fill>
-							<AppBox background="neutral-3">
+							<AppBox background="#44475a">
 								<Heading level="3" margin="none">
 									Aves Chilenas
 								</Heading>
@@ -77,7 +77,7 @@ function App() {
 								flex
 								overflow={{ horizontal: "hidden" }}
 							>
-								<Box flex align="center" justify="center">
+								<Box flex align="center" justify="center" background="#282a36">
 									{Ave.name === "" ? (
 										<h2>Info</h2>
 									) : (
@@ -104,14 +104,14 @@ function App() {
 												<br />
 												<p
 													style={{
-														marginBottom: "1%",
+														marginBottom: "1%"
 													}}
 												>
 													<strong>
 														Familia:
-													</strong>{" "}
+													</strong>
 													{Ave.order}
-												< /p>
+												</p>
 												<br />
 												<p
 													style={{
@@ -147,16 +147,6 @@ function App() {
 													</p>
 												</div>
 											</div>
-											<Button
-												icon={<Favorite color="blue" />}
-												hoverIndicator
-											/>
-											<Button
-												icon={
-													<ShareOption color="plain" />
-												}
-												hoverIndicator
-											/>
 										</div>
 									)}
 									<Button
@@ -164,6 +154,7 @@ function App() {
 										label="Buscar Ave"
 										margin="small"
 										size="large"
+										color="#50fa7b"
 										onClick={() => {
 											Buscar();
 										}}
@@ -182,7 +173,7 @@ function App() {
 											align="center"
 											justify="center"
 										>
-											sidebar
+											<div><Github size="medium"/>  <a href="https://github.com/mclovin-felipe" target="_blank" style={{textDecoration:"none"}}>Mclovin Felipe</a></div> 
 										</Box>
 									</Collapsible>
 								)}
